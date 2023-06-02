@@ -55,8 +55,7 @@ span{
 }
 
 .btn:hover{
-  color: var(--text-color);
-  background: rgb(8, 79, 87);
+  background: var(--text-color);
 }
 
 
@@ -103,9 +102,19 @@ span{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/assets/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0;
 }
 .home-content{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .3);
 }
 .home-content h3{
   font-size: 3.2rem;
@@ -251,3 +260,50 @@ span{
   margin-top: 2rem;
   cursor: pointer;
 }
+
+.success{
+  background-color: rgba(132, 240, 99, 0.5);
+  color: rgb(14, 245, 34);
+  animation: status 4s ease forwards;
+}
+.error{
+  background-color: rgba(240, 99, 99, 0.5);
+  color: rgb(126, 0, 0);
+  animation: status 4s ease forwards;
+}
+
+/* Footer */
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+.footer-text{
+  font-size: 1.6rem;
+}
+
+.footer-icon-top a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .8rem;
+  transition: .5s ease;
+}
+
+.footer-icon-top a:hover{
+  background: var(--text-color);
+}
+
+.footer-icon-top a i{
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+
+/* MEDIA QUERIES AND BREAKPOINTS */
+

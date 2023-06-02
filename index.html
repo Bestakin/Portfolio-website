@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DABuildsInc</title>
 
-    <!-- Link to font awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link to boxixons css for icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link to CSS -->
     <link rel="stylesheet" href="/css/styles.css">
-    <!-- Javascript module link -->
-    <!-- <script type="module" src="/javascript/main.js"></script> -->
 </head>
 <body>
     <header class="header">
@@ -22,8 +17,8 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#services">Services</a>
-            <a href="/html/Projects.html">Projects</a>
             <a href="#contact">Contact Us</a>
+            <a href="/html/Projects.html">Projects</a>
         </nav>
         <i class='bx bx-menu' id="menu-icon"></i>
     </header>
@@ -88,21 +83,32 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
 
-        <form action="#">
+        <form id = "contact-form" action="https://formspree.io/f/xrgvjzva" method="post">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name= "fullname" placeholder="Full Name">
+                <input type="email" name= "email" placeholder="Email Address">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Subject">
+                <input type="number" name= "phonenumber" placeholder="Phone Number">
+                <input type="text" name= "subject" placeholder="Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button type="submit" value="Send Message" class="btn">Send Message</button>
+            <!-- <input type="submit" value="Send Message" class="btn"> -->
+            <p id="form-status"></p>
         </form>
     </section>
 
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 DABUILDS | All Rights Reserved.</p>
+        </div>
+        <div class="footer-icon-top">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
     <script type="module" src="/javascript/main.js"></script>
-    <script type="module" src="/javascript/bundle.js"></script>
 </body>
 </html>
